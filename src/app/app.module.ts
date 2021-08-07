@@ -11,6 +11,7 @@ import { TopMenuComponent } from './Layout/top-menu/top-menu.component';
 import { PostPreviewListComponent } from './Shared/post-preview-list/post-preview-list.component';
 import { ProjectListComponent } from './Shared/project-list/project-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostNewComponent } from './Pages/post-new/post-new.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     PostComponent,
     PostPreviewListComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    PostNewComponent
   ],
   imports: [
     BrowserModule,

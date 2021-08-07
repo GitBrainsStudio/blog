@@ -1,0 +1,40 @@
+
+<div class="wrap">
+    <app-top-menu></app-top-menu>
+    <main class="mb-5">
+        
+       <!--  <ng-container *ngIf="postPreviews$ | async as postPreviews">
+            <div class="container"  @opacityAnimation>
+                <h1 class="mt-5">Блог</h1>
+                <app-post-preview-list [data]="postPreviews"></app-post-preview-list>
+            </div>
+        </ng-container> -->
+
+        <ng-container>
+            <div class="container">
+                <h1 class="mt-5">Публикация нового поста</h1>
+               <!--  <p style="margin:0" class="mb-3">Список последних проектов, над которыми я работал</p>
+                <app-project-list [data]="projectRows"></app-project-list> -->
+
+                <select >
+                    <option *ngFor="let tag of tags$ | async"
+                            >{{ tag.Title }}
+                    </option>
+                  </select>
+
+                <h2 class="mt-5">Заголовок</h2>
+                <input>
+                
+                <h2 class="mt-5">Содержание</h2>
+                <input>
+                  
+                <button>Опубликовать</button>
+            </div>
+        </ng-container>
+
+    </main>
+</div>
+
+<app-footer></app-footer>
+
+

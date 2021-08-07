@@ -1,15 +1,31 @@
-import { Stack } from './stack';
+import { Tag } from "./Tag"
 
-export interface Project
-{
-    id : string;
-    logo : string;
-    name : string;
-    description : string;
-    stack : Stack[];
-}
 
-export class ProjectRow
+
+
+
+
+
+
+
+export class Project 
 {
-    constructor(public position:number, public projects: Project[]) { }
+
+    Id:string
+    Title:string
+    Description:string
+    Tags:Tag[]
+
+    constructor(
+        id:string,
+        title:string,
+        description:string,
+        tags:Tag[]
+    )
+    {
+        this.Id = id
+        this.Title = title
+        this.Description = description
+        this.Tags = tags
+    }
 }

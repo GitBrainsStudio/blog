@@ -1,6 +1,6 @@
 <div class="wrap">
     <app-top-menu></app-top-menu>
-    <main class="mb-5">
+<!--     <main class="mb-5">
         <div class="container mt-5" [ngClass]="{'hide' : !isLoad, 'show' : isLoad}">
             <markdown  [src]="pathToFile" (load)="onLoad()" (error)="onError()"> </markdown>
             <ng-container *ngIf="postPreviews$ | async as postPreviews">
@@ -8,7 +8,7 @@
                 <app-post-preview-list [data]="postPreviews"></app-post-preview-list>
             </ng-container>
         </div>
-    </main>
+    </main> -->
 </div>
 
 <app-footer></app-footer>

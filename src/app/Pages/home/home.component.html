@@ -3,12 +3,12 @@
     <app-top-menu></app-top-menu>
     <main class="mb-5">
         
-        <ng-container *ngIf="postPreviews$ | async as postPreviews">
+       <!--  <ng-container *ngIf="postPreviews$ | async as postPreviews">
             <div class="container"  @opacityAnimation>
                 <h1 class="mt-5">Блог</h1>
                 <app-post-preview-list [data]="postPreviews"></app-post-preview-list>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <ng-container *ngIf="projectRows$ | async as projectRows">
             <div class="container" @opacityAnimation>

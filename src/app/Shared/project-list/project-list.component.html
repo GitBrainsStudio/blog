@@ -1,4 +1,4 @@
-<div class="row" *ngFor="let row of data">
+<!-- <div class="row" *ngFor="let row of data">
     <div class="col-lg-3 pb-5" *ngFor="let p of row.projects" >
         <div class="project-box">
             <div class="project-logo mb-2">
@@ -8,6 +8,21 @@
             <p class="m-0">{{ p.description }}</p>
             <div>
                 <span class="badge mr-1 stack unselectable" *ngFor="let s of p.stack">{{ s.name }}</span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-lg-3 pb-5" *ngFor="let p of data" >
+        <div class="project-box">
+            <div class="project-logo mb-2">
+                <img [src]="'assets/images/' + p.logo">
+            </div>
+            <a [href]="p.Id" target="_blank"><h2>{{ p.Title }}</h2></a>
+            <p class="m-0">{{ p.Description }}</p>
+            <div>
+                <span class="badge mr-1 stack unselectable" *ngFor="let s of p.Tags">{{ s.Title }}</span>
             </div>
         </div>
     </div>

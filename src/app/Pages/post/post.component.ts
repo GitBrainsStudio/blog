@@ -4,16 +4,15 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { PostPreviewHttp } from 'src/app/Models/http-models/post-preview.http';
 import { Post } from 'src/app/Models/post';
-import { MdDataService } from 'src/app/Services/md-data.service';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostComponent {
 
-  isLoad:boolean;
+  /* isLoad:boolean;
   pathToFile:string;
   paramId: string;
 
@@ -65,6 +64,6 @@ export class PostComponent implements OnInit {
 
     return array;
   }
-  
+   */
   
 }
