@@ -12,6 +12,7 @@ import { PostPreviewListComponent } from './Shared/post-preview-list/post-previe
 import { ProjectListComponent } from './Shared/project-list/project-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostNewComponent } from './Pages/post-new/post-new.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PostNewComponent } from './Pages/post-new/post-new.component';
     PostNewComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

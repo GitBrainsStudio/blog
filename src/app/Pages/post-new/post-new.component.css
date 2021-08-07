@@ -1,0 +1,137 @@
+/* .tag-suggestions {
+
+    position: absolute;
+    padding: 4px;
+    z-index: 300;
+    border-radius: 5px;
+    box-shadow: var(--bs-md);
+    flex-wrap: wrap;
+    background-color: rgba(128, 128, 128, 0.212);
+}
+
+.tag-suggestion
+{
+    z-index: 400;
+    padding: 8px;
+    width: 200px;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.tag-suggestion:hover
+{
+    background-color: orangered;
+} */
+
+.tag-suggestions 
+{
+    position: absolute;
+    padding: 4px;
+    font-size: 12px;
+    border: 1px solid rgba(51, 51, 51, 0.349);
+
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.349);
+    z-index: 300;
+}
+
+.tag-suggestion:hover
+{
+    background-color: rgba(40, 40, 41, 0.041);
+    cursor: pointer;
+} 
+
+.tag-suggestions .notFoundMessage
+{
+    color: #333;
+}
+
+.w-20px
+{
+    width: 20px;
+}
+
+.tag
+{
+    background-color: #e1ecf4;
+    padding: 5px;
+    border-radius: 5px;
+    color: #39739d;
+}
+
+
+.selectedTag
+{
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 12px;
+    background-color: #e1ecf4; 
+    border-radius: 3px;
+    color: #39739d;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.tagSearchArea
+{
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0;
+    padding: .6em .7em;
+    border: 1px solid rgba(51, 51, 51, 0.349);
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: inherit;
+    z-index: 300;
+}
+
+#tagSearchInput
+{
+    font-size: 12px;
+    outline: none;
+    border:none
+}
+
+#removeSeletedTagButton
+{
+  background-color: #e1ecf4; 
+  color: #54b3f7;
+  border: none;
+  border-radius: 3px;
+}
+
+#removeSeletedTagButton:hover
+{
+    background-color: #39739d; 
+    cursor: pointer;
+}
+
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
