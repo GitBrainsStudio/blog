@@ -1,0 +1,75 @@
+
+<div class="wrap">
+    <app-top-menu></app-top-menu>
+    <main>
+        <ng-container>
+            <div class="container">
+                <div class="row mt-3" *ngIf="post">
+
+                    <div class="col-sm-4 p-3">
+       
+                        <h4 >Заголовок</h4>
+                        <span style="font-size: 12px;">Придумайте наиболее подходящий заголовок для вашего поста</span>
+                        <input class="s-input" [(ngModel)]="post.Title">
+                        
+                        
+                        <h4 class="mt-2">Теги</h4>
+                        <span style="font-size: 12px;">Выберите подходящие теги</span>
+                        <div >
+                            <div (click)="focusInput()" class="tagSearchArea">
+                                <span *ngFor="let tag of post.Tags; let i = index" class="selectedTag">{{ tag.Title }} <a class="s-tag-dismiss" (click)="removeSelectedTag(i)" title="Удалить тег"><svg class="svg-icon iconClearSm pe-none" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M12 3.41L10.59 2 7 5.59 3.41 2 2 3.41 5.59 7 2 10.59 3.41 12 7 8.41 10.59 12 12 10.59 8.41 7z"></path></svg></a></span>
+                                    
+                                <input 
+                                        id="tagSearchInput" 
+                                        type="text" 
+                                        [(ngModel)]="tagSearch" 
+                                        (ngModelChange)="changeTagSearchInputWidth()"
+                                        autocomplete="off"  
+                                        [placeholder]="tagSearchInputPlaceholder" 
+                                        style="width: 20px;">
+                            </div>
+            
+                            <div class="tag-suggestions p-1" *ngIf="tagSearch">
+                              
+                                <ng-container *ngIf="TagSuggestions.length == 0">
+                                    <span class="notFoundMessage p-2">ничего не найдено</span>
+                                </ng-container>
+                                <ng-container *ngIf="TagSuggestions.length > 0">
+                                    <div class="tag-suggestion p-2" *ngFor="let tag of TagSuggestions" (click)="selectTag(tag)">
+                                        <span class="tag">{{ tag.Title }}</span>
+                                     </div>
+                                </ng-container>
+                            </div>
+                        </div>
+        
+                        <h4 class="mt-4">Содержание</h4>
+                        <span style="font-size: 12px;">Введите содержание поста в формате markdown</span>
+                        <textarea class="s-input" style="resize: vertical;" [(ngModel)]="post.Content"></textarea>
+        
+                        <div class="d-flex justify-content-end">
+
+                            <button class="button" (click)="save()" >
+                               {{ savePostButtonMessage }}
+                            </button> 
+
+                        </div>
+                    </div>
+    
+                    <div class="col-sm-8 p-3" style="border-left: 1px solid rgba(128, 128, 128, 0.103);">
+                        <app-post [post]="post"></app-post>
+                    </div>
+                </div>
+           
+            </div>
+            
+        </ng-container>
+
+    </main>
+</div>
+
+<app-footer></app-footer>
+
+
+
+

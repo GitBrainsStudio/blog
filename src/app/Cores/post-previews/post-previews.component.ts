@@ -6,11 +6,11 @@ import { PostService } from 'src/app/Services/PostService';
 import { RefreshService } from 'src/app/Services/refresh.service';
 
 @Component({
-  selector: 'app-post-preview-list',
-  templateUrl: './post-preview-list.component.html',
-  styleUrls: ['./post-preview-list.component.css']
+  selector: 'app-post-previews',
+  templateUrl: './post-previews.component.html',
+  styleUrls: ['./post-previews.component.css']
 })
-export class PostPreviewListComponent implements OnInit {
+export class PostPreviewsComponent implements OnInit {
 
   constructor(
     public refreshService : RefreshService,
@@ -20,14 +20,13 @@ export class PostPreviewListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() data : Post[];
+  @Input() postPreviews : Post[];
 
-  delete(post:Post)
+  delete(post:Post, index:number)
   {
     if(confirm("Вы действительно хотите удалить этот пост?")) {
       this.postService.Delete(new PostDelete(post.Id))
-        .subscribe(answer => this.router.navigate(['/']))
+        .subscribe(answer => { this.postPreviews.splice(index, 1) })
     }
   }
-
 }

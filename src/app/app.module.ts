@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HomeComponent } from './Pages/home/home.component';
-import { PostComponent } from './Pages/post/post.component';
 import { FooterComponent } from './Layout/footer/footer.component';
 import { TopMenuComponent } from './Layout/top-menu/top-menu.component';
 import { PostPreviewListComponent } from './Shared/post-preview-list/post-preview-list.component';
 import { ProjectListComponent } from './Shared/project-list/project-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PostNewComponent } from './Pages/post-new/post-new.component';
 import { FormsModule } from '@angular/forms';
+import { PostDetailsComponent } from './Pages/post-details/post-details.component';
+import { PostComponent } from './Cores/post/post.component';
+import { PostEditComponent } from './Pages/post-edit/post-edit.component';
+import { PostPreviewsComponent } from './Cores/post-previews/post-previews.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { FormsModule } from '@angular/forms';
     TopMenuComponent,
     FooterComponent,
     HomeComponent,
-    PostComponent,
     PostPreviewListComponent,
     ProjectListComponent,
-    PostNewComponent
+    PostDetailsComponent,
+    PostComponent,
+    PostEditComponent,
+    PostPreviewsComponent
   ],
   imports: [
     FormsModule,

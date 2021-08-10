@@ -1,0 +1,18 @@
+<div class="wrap">
+    <app-top-menu></app-top-menu>
+    <main class="mb-5">
+        <div class="container p-3" *ngIf="post">
+           
+            <app-post [post]="post"></app-post>
+
+            <!-- <ng-container *ngIf="posts">
+               
+                <h4 class="mt-5">Другие статьи</h4>
+                <app-post-preview-list [data]="otherPosts"></app-post-preview-list>
+            </ng-container> -->
+        </div>
+    </main>
+</div>
+
+<app-footer></app-footer>
+
