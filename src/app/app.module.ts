@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MarkdownModule } from 'ngx-markdown';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { HomeComponent } from './Pages/home/home.component';
-import { PostComponent } from './Pages/post/post.component';
-import { FooterComponent } from './Layout/footer/footer.component';
-import { TopMenuComponent } from './Layout/top-menu/top-menu.component';
-import { PostPreviewListComponent } from './Shared/post-preview-list/post-preview-list.component';
-import { ProjectListComponent } from './Shared/project-list/project-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './Components/home/home.component';
+import { FooterComponent } from './Components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { PostComponent } from './Components/post/post.component';
+import { PostDetailsComponent } from './Components/post-details/post-details.component';
+import { PostEditComponent } from './Components/post-edit/post-edit.component';
+import { PostPreviewsComponent } from './Components/post-previews/post-previews.component';
+import { TopMenuComponent } from './Components/top-menu/top-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +20,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TopMenuComponent,
     FooterComponent,
     HomeComponent,
+    PostDetailsComponent,
     PostComponent,
-    PostPreviewListComponent,
-    ProjectListComponent
+    PostEditComponent,
+    PostPreviewsComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

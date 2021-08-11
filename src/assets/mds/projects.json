@@ -1,7 +1,22 @@
 [
     {
+        "id" : "https://github.com/GitBrainsStudio/QuizPortal",
+        "name" : "Викториниус",
+        "logo" : "quiz-portal.png",
+        "description" : "Квиз портал для тестирования знаний в различных областях.",
+        "stack": [
+            {
+                "name" : "Angular"
+            },
+            {
+                "name" : "RxJS"
+            }
+        ]
+    },
+    {
         "id" : "https://github.com/GitBrainsStudio/5kaParserPrices",
         "name" : "Парсер цен с сайта 5ka.ru",
+        "logo" : "5ka-parser.jpg",
         "description" : "Люблю я Selenium, прям обожаю! Но тут без него. Реализация парсера сайта пятёрки для получения актуальных цен.",
         "stack": [
             {
@@ -15,6 +30,7 @@
     {
         "id" : "https://github.com/GitBrainsStudio/MeteoReader",
         "name" : "Прогноз погоды from OpenWeatherMap Api",
+        "logo" : "meteoreader.jpg",
         "description" : "Веб решение для отображения данных с api сервиса. Используется Angular Material.",
         "stack": [
             {
@@ -26,23 +42,8 @@
         ]
     },
     {
-        "id" : "https://github.com/GitBrainsStudio/ConsoleCalculator",
-        "name" : "Калькулятор математических выражений",
-        "description" : "Приложение для вычисления результата математического выражение вида: (-1+2)*130-(34/2+172,4)*0,01",
-        "stack": [
-            {
-                "name" : "Pattern Strategy"
-            },
-            {
-                "name" : "Solid"
-            },
-            {
-                "name" : "C#"
-            }
-        ]
-    },
-    {
         "id" : "https://github.com/GitBrainsStudio/Statistic-Calculation",
+        "logo" : "statistic-calc.jpg",
         "name" : "Калькулятор статистики",
         "description" : "Приложение для подсчета количества символов в файлах различных форматов (doc, pdf, xls). Используется SOLID вместе с MVVM.",
         "stack": [
@@ -59,6 +60,7 @@
     },
     {
         "id" : "https://github.com/GitBrainsStudio/Angular-Material-Blog",
+        "logo" : "mat-lenta.jpg",
         "name" : "Блог-лента на материал",
         "description" : "SPA, в котором все посты находятся на главной странице. Используется материал дизайн.",
         "stack": [
@@ -74,7 +76,19 @@
         ]
     },
     {
+        "id" : "https://github.com/GitBrainsStudio/Angular-Material-Blog",
+        "logo" : "blog-api.jpg",
+        "name" : "REST-Ful API для блога",
+        "description" : "Бэкенд сервис для блога на NET.Core",
+        "stack": [
+            {
+                "name" : "NET.Core"
+            }
+        ]
+    },
+    {
         "id" : "https://github.com/GitBrainsStudio/Yandex-Map-Parser",
+        "logo" : "yamap-parser.jpg",
         "name" : "Парсер данных с Яндекс Карт",
         "description" : "Приложение, позволяющее получать данные с Яндекс карт по заданному массиву координат.",
         "stack": [
@@ -91,6 +105,7 @@
     },
     {
         "id" : "https://github.com/GitBrainsStudio/Yandex-Geocoder-Api-Worker",
+        "logo" : "yageo.jpg",
         "name" : "Приложение для работы с Яндекс Геокодером",
         "description" : "Приложение, позволяющее получать данных с Яндекс карт по заданному массиву координат.",
         "stack": [
@@ -107,6 +122,7 @@
     },
     {
         "id" : "https://github.com/GitBrainsStudio/Checker-Prices-RBT",
+        "logo" : "rbt-helper-struct.jpg",
         "name" : "RBT Helper",
         "description" : "Приложение для оптимизации и ускорения рабочего процесса. Приложение писал, когда работал инженером в RBT.",
         "stack": [
@@ -124,6 +140,7 @@
     {
         "id" : "https://github.com/GitBrainsStudio/Blog",
         "name" : "GitBrains Blog",
+        "logo" : "blog-person.jpg",
         "description" : "Сайт на котором Вы сейчас находитесь. Рендерю маркдаунов через ngx-markdown.",
         "stack": [
             {

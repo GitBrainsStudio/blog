@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './Pages/home/home.component';
-import { PostComponent } from './Pages/post/post.component';
+import { HomeComponent } from './Components/home/home.component';
+import { PostDetailsComponent } from './Components/post-details/post-details.component';
+import { PostEditComponent } from './Components/post-edit/post-edit.component';
+
+
 
 
 const routes: Routes = [
@@ -9,7 +12,18 @@ const routes: Routes = [
     path: '', component: HomeComponent
   },
   {
-    path: 'post/:md', component: PostComponent
+    path: 'posts', children: 
+    [
+      {
+        path: 'new', component: PostEditComponent,
+      },
+      {
+        path: ':id', component: PostDetailsComponent,
+      },
+      {
+        path: ':id/edit', component: PostEditComponent
+      }
+    ]
   },
   {
     path: '**', redirectTo: ''

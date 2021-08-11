@@ -1,0 +1,27 @@
+
+<div class="wrap">
+    <app-top-menu></app-top-menu>
+    <main class="mb-5 container">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <ng-container *ngIf="posts$ | async as posts">
+                    <div class="container p-3">
+                        <div class="d-flex align-items-center">
+                            <h1>Блог</h1>
+                        </div>
+                       
+                        <app-post-previews [postPreviews]="posts"></app-post-previews>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="col-sm-8">
+                <!-- projects awaiting -->
+            </div>
+        </div>
+    </main>
+</div>
+
+<app-footer></app-footer>
+
+
