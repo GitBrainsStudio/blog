@@ -39,6 +39,7 @@ export class PostEditComponent implements OnInit {
               setTimeout(() => 
               {
                 this.changeTagSearchInputWidth()
+                this.changeTextAreaHeighth()
               },
               0.1);
             })
@@ -59,13 +60,14 @@ export class PostEditComponent implements OnInit {
       setTimeout(() => 
       {
         this.changeTagSearchInputWidth()
+        this.changeTextAreaHeighth()
       },
       0.1);
     }
   }
 
 
-  tags:Tag[]
+  tags:Tag[] = []
   postCreate:PostCreate
 
   tagSearch:string
@@ -78,12 +80,43 @@ export class PostEditComponent implements OnInit {
   {
     return this.tags.filter(tag => tag.Title.toLocaleLowerCase().includes(this.tagSearch.toLocaleLowerCase()) && !this.post.Tags.some(v => v.Id == tag.Id))
   }
+
+  addNewTag()
+  {
+    if (!this.tagSearch)
+      return
+
+      
+    if (this.tags.some(tag => tag.Title.toLocaleLowerCase() == this.tagSearch.toLocaleLowerCase()))
+    {
+      let tag = this.tags.find(tag => tag.Title.toLocaleLowerCase() == this.tagSearch.toLocaleLowerCase())
+      this.selectTag(tag)
+      return
+    }
+
+    if (this.post.Tags.some(tag => tag.Title.toLocaleLowerCase() == this.tagSearch.toLocaleLowerCase()))
+    {
+      this.tagSearch = ""
+      return
+    }
+
+      
+
+    let tag = new Tag(null, this.tagSearch)
+    this.selectTag(tag)
+  }
   
   selectTag(tag:Tag)
   {
     this.post.Tags.push(tag)
     this.tagSearch = ""
     this.focusInput()
+  }
+
+  tagInputBackspaceEvent()
+  {
+    this.post.Tags.splice(this.post.Tags.length - 1, 1)
+    this.changeTagSearchInputWidth()
   }
 
   removeSelectedTag(index:number)
@@ -155,4 +188,10 @@ export class PostEditComponent implements OnInit {
     }
   }
 
+  changeTextAreaHeighth(){
+    let  textArea = document.getElementById("postContentTextArea")       
+    textArea.style.overflow = 'hidden';
+    textArea.style.height = '100px';
+    textArea.style.height = textArea.scrollHeight + 'px';
+  }
 }

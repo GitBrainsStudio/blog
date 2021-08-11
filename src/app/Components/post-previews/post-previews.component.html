@@ -1,0 +1,9 @@
+<div *ngFor="let postPreview of postPreviews; let i = index;" class="mb-2">
+    <ul>
+        <li *ngFor="let tag of postPreview.Tags">
+            <span class="badge unselectable">{{ tag.Title }}</span> 
+        </li>
+    </ul> 
+    <a [routerLink]="'/posts/' + postPreview.Id"  >{{ postPreview.Title }}</a> 
+    (<a [routerLink]="'/posts/' + postPreview.Id + '/edit'" >редактировать</a>,<a (click)="delete(postPreview, i)" >удалить</a>)
+</div>

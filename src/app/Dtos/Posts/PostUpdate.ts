@@ -5,13 +5,13 @@ export class PostUpdate
     Id:string
     Title:string
     Content:string
-    TagsIds:string[]
+    TagsTitles:string[]
 
     constructor(post:Post)
     {
         this.Id = post.Id
         this.Title = post.Title
         this.Content = post.Content
-        this.TagsIds = post.Tags.map(tag => tag.Id)
+        this.TagsTitles = post.Tags.map(tag => tag.Title)
     }
 }

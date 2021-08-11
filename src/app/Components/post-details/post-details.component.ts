@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
-import { PostPreviewHttp } from 'src/app/Models/http-models/post-preview.http';
 import { Post } from 'src/app/Models/Post';
 import { PostService } from 'src/app/Services/PostService';
 

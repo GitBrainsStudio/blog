@@ -1,9 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { PostDelete } from 'src/app/Dtos/Posts/PostDelete';
 import { Post } from 'src/app/Models/Post';
 import { PostService } from 'src/app/Services/PostService';
-import { RefreshService } from 'src/app/Services/refresh.service';
 
 @Component({
   selector: 'app-post-previews',
@@ -13,9 +11,7 @@ import { RefreshService } from 'src/app/Services/refresh.service';
 export class PostPreviewsComponent implements OnInit {
 
   constructor(
-    public refreshService : RefreshService,
-    private postService:PostService,
-    private router:Router) { }
+    private postService:PostService) { }
 
   ngOnInit(): void {
   }

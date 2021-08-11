@@ -8,7 +8,7 @@
                 <ng-container *ngIf="posts$ | async as posts">
                     <div class="container p-3">
                         <div class="d-flex align-items-center">
-                            <h1 >Блог</h1>
+                            <h1>Блог</h1>
                         </div>
                        
                         <app-post-previews [postPreviews]="posts"></app-post-previews>
@@ -16,21 +16,9 @@
                 </ng-container>
             </div>
             <div class="col-sm-8">
-               <!--  <ng-container *ngIf="projectRows$ | async as projectRows">
-                    <div class="container" @opacityAnimation>
-                        <h1 class="mt-5">Проекты</h1>
-                        <p style="margin:0" class="mb-3">Список последних проектов, над которыми я работал</p>
-                        <app-project-list [data]="projectRows"></app-project-list>
-                    </div>
-                </ng-container> -->
+                <!-- projects awaiting -->
             </div>
         </div>
-        
-
-
-
-    
-
     </main>
 </div>
 

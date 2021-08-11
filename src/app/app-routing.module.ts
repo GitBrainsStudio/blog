@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './Pages/home/home.component';
-import { PostDetailsComponent } from './Pages/post-details/post-details.component';
-import { PostEditComponent } from './Pages/post-edit/post-edit.component';
+import { HomeComponent } from './Components/home/home.component';
+import { PostDetailsComponent } from './Components/post-details/post-details.component';
+import { PostEditComponent } from './Components/post-edit/post-edit.component';
 
 
 
@@ -31,7 +31,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true, onSameUrlNavigation:"reload" })],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -3,7 +3,6 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { GTBRNS_BLOG_API } from "src/environments/environment.prod";
-import { Project } from "../Models/project";
 import { Tag } from "../Models/Tag";
 
 
