@@ -115,8 +115,11 @@ export class PostEditComponent implements OnInit {
 
   tagInputBackspaceEvent()
   {
-    this.post.Tags.splice(this.post.Tags.length - 1, 1)
-    this.changeTagSearchInputWidth()
+    if (!this.tagSearch)
+    {
+      this.post.Tags.splice(this.post.Tags.length - 1, 1)
+      this.changeTagSearchInputWidth()
+    }
   }
 
   removeSelectedTag(index:number)
