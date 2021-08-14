@@ -89,8 +89,15 @@ export class PostEditComponent implements OnInit {
       
     if (this.tags.some(tag => tag.Title.toLocaleLowerCase() == this.tagSearch.toLocaleLowerCase()))
     {
-      let tag = this.tags.find(tag => tag.Title.toLocaleLowerCase() == this.tagSearch.toLocaleLowerCase())
-      this.selectTag(tag)
+      let findTag = this.tags.find(tag => tag.Title.toLocaleLowerCase() == this.tagSearch.toLocaleLowerCase())
+      
+      if (this.post.Tags.some(selectedtag => selectedtag.Id == findTag.Id))
+      {
+        this.tagSearch = ""
+        return
+      }
+
+      this.selectTag(findTag)
       return
     }
 
