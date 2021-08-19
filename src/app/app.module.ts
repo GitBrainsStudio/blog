@@ -13,6 +13,7 @@ import { PostDetailsComponent } from './Components/post-details/post-details.com
 import { PostEditComponent } from './Components/post-edit/post-edit.component';
 import { PostPreviewsComponent } from './Components/post-previews/post-previews.component';
 import { TopMenuComponent } from './Components/top-menu/top-menu.component';
+import { AuthenticationComponent } from './Components/authentication/authentication.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TopMenuComponent } from './Components/top-menu/top-menu.component';
     PostDetailsComponent,
     PostComponent,
     PostEditComponent,
-    PostPreviewsComponent
+    PostPreviewsComponent,
+    AuthenticationComponent
   ],
   imports: [
     FormsModule,
