@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { GTBRNS_BLOG_API } from "src/environments/environment.prod";
+import { GTBRNS_BLOG_API } from "src/environments/environment";
 import { PostCreate } from "../Dtos/Posts/PostCreate";
 import { PostDelete } from "../Dtos/Posts/PostDelete";
 import { PostUpdate } from "../Dtos/Posts/PostUpdate";
