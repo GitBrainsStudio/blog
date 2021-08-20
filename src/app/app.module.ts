@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MarkdownModule } from 'ngx-markdown';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './Components/home/home.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +14,7 @@ import { PostEditComponent } from './Components/post-edit/post-edit.component';
 import { PostPreviewsComponent } from './Components/post-previews/post-previews.component';
 import { TopMenuComponent } from './Components/top-menu/top-menu.component';
 import { AuthenticationComponent } from './Components/authentication/authentication.component';
+import { TokenInterceptor } from './Handlers/TokenInterceptor';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { AuthenticationComponent } from './Components/authentication/authenticat
     BrowserAnimationsModule,
     MarkdownModule.forRoot()
   ],
-  providers: [],
+  providers: [  { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
