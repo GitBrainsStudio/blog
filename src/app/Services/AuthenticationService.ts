@@ -1,4 +1,5 @@
 import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { BehaviorSubject, Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -7,13 +8,13 @@ import { Authenticate } from "../Dtos/Users/Authenticate";
 import { Account } from "../Models/Account";
 
 
-
+@Injectable({providedIn: "root"})
 export class AuthenticationService
 {
     private authenticatedAccountLocalStorageTitle = 'authenticated_account'
     private systemAccountSubject: BehaviorSubject<Account>;
 
-    constructor(private http:HttpClient, private router:Router)
+    constructor(private http:HttpClient)
     {
         this.systemAccountSubject = new BehaviorSubject<Account>(JSON.parse(localStorage.getItem(this.authenticatedAccountLocalStorageTitle)));
     }
@@ -40,6 +41,5 @@ export class AuthenticationService
     Logout() {
         localStorage.removeItem(this.authenticatedAccountLocalStorageTitle);
         this.systemAccountSubject.next(null);
-        this.router.navigate(['']);
     }
 }

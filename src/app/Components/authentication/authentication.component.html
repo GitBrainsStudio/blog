@@ -3,18 +3,18 @@
     <main class="mb-5 container">
 
         <div class="row mt-3">
-            <div class="col-sm-2 p-3">
+            <div class="col-sm-2 p-3" (keyup.enter)="login()">
 
                 
                 <span style="font-size: 12px;">Почтовый адрес:</span>
-                <input class="s-input">
+                <input class="s-input" [(ngModel)]="authenticationData.Email">
 
                 <span style="font-size: 12px;">Пароль:</span>
-                <input class="s-input">
+                <input class="s-input" [(ngModel)]="authenticationData.Password">
 
                 <div class="d-flex justify-content-end">
 
-                    <button class="button" >
+                    <button class="button" (click)="login()" >
                       Войти
                     </button> 
 

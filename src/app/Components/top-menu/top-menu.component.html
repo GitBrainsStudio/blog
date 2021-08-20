@@ -12,12 +12,16 @@
                         <a href="mailto:gitbrains@gmail.com">Почта</a>
                     </li>
 
-                    <li>
+                    <li *ngIf="authentcationService.AuthenticatedAccount">
                         <a href="#/posts/new" >Новый пост</a>
                     </li>
 
-                    <li>
+                    <li *ngIf="!authentcationService.AuthenticatedAccount">
                         <a href="#/authentication">Войти на сайт</a>
+                    </li>
+
+                    <li *ngIf="authentcationService.AuthenticatedAccount">
+                        <a (click)="authentcationService.Logout()">Выйти ({{ authentcationService.AuthenticatedAccount.User.Email }})</a>
                     </li>
                 </ul>
             </nav>
