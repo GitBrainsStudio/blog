@@ -4,6 +4,10 @@
             <span class="badge unselectable">{{ tag.Title }}</span> 
         </li>
     </ul> 
+
     <a [routerLink]="'/posts/' + postPreview.Id"  >{{ postPreview.Title }}</a> 
-    (<a [routerLink]="'/posts/' + postPreview.Id + '/edit'" >редактировать</a>,<a (click)="delete(postPreview, i)" >удалить</a>)
+    <ng-container *ngIf="authenticationService.AuthenticatedAccount">
+        (<a [routerLink]="'/posts/' + postPreview.Id + '/edit'">редактировать</a>,<a (click)="delete(postPreview, i)" >удалить</a>)
+    </ng-container>
+
 </div>

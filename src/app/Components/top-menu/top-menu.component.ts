@@ -8,7 +8,7 @@ import { AuthenticationService } from 'src/app/Services/AuthenticationService';
 })
 export class TopMenuComponent implements OnInit {
 
-  constructor(public authentcationService:AuthenticationService) { }
+  constructor(public authenticationService:AuthenticationService) { }
 
   ngOnInit(): void {
   }

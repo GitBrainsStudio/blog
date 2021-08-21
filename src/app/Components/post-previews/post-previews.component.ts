@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PostDelete } from 'src/app/Dtos/Posts/PostDelete';
 import { Post } from 'src/app/Models/Post';
+import { AuthenticationService } from 'src/app/Services/AuthenticationService';
 import { PostService } from 'src/app/Services/PostService';
 
 @Component({
@@ -11,7 +12,8 @@ import { PostService } from 'src/app/Services/PostService';
 export class PostPreviewsComponent implements OnInit {
 
   constructor(
-    private postService:PostService) { }
+    private postService:PostService,
+    public authenticationService:AuthenticationService) { }
 
   ngOnInit(): void {
   }
