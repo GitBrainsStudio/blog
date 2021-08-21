@@ -39,6 +39,7 @@ export class PostEditComponent implements OnInit {
               setTimeout(() => 
               {
                 this.changeTagSearchInputWidth()
+                this.changeTextAreaHeighth()
               },
               0.1);
             })
@@ -59,6 +60,7 @@ export class PostEditComponent implements OnInit {
       setTimeout(() => 
       {
         this.changeTagSearchInputWidth()
+        this.changeTextAreaHeighth()
       },
       0.1);
     }
@@ -164,6 +166,14 @@ export class PostEditComponent implements OnInit {
       return "Сохранить изменения"
     return "Отправить на публикацию"
   }
+
+  get postEditPageTitle() : string
+  {
+    if (this.postEditmode)
+      return "Редактирование поста"
+    return "Новый пост"
+  }
+
 
   
   changeTagSearchInputWidth()
