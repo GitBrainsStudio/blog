@@ -14,7 +14,7 @@ export class AuthenticationService
     private authenticatedAccountLocalStorageTitle = 'authenticated_account'
     private systemAccountSubject: BehaviorSubject<Account>;
 
-    constructor(private http:HttpClient)
+    constructor(private http:HttpClient, private router:Router)
     {
         this.systemAccountSubject = new BehaviorSubject<Account>(JSON.parse(localStorage.getItem(this.authenticatedAccountLocalStorageTitle)));
     }
@@ -41,5 +41,6 @@ export class AuthenticationService
     Logout() {
         localStorage.removeItem(this.authenticatedAccountLocalStorageTitle);
         this.systemAccountSubject.next(null);
+        this.router.navigate(['/'])
     }
 }

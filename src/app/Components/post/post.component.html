@@ -1,2 +1,7 @@
 <h1>{{post.Title}}</h1>
+<ul>
+    <li *ngFor="let tag of post.Tags">
+        <span class="badge unselectable mr-2 mb-2">{{ tag.Title }}</span> 
+    </li>
+</ul> 
 <markdown ngPreserveWhitespaces  [data]="post.Content"></markdown>
