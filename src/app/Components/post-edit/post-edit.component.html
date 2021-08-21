@@ -1,13 +1,16 @@
 
 <div class="wrap">
     <app-top-menu></app-top-menu>
-    <main>
+    <main class="mb-5 container">
         <ng-container>
-            <div class="container">
-                <div class="row mt-3" *ngIf="post">
+                <div class="row" *ngIf="post">
 
                     <div class="col-sm-4 p-3">
-       
+                        <h3 class="mb-5" style="border-bottom: 1px solid rgba(128, 128, 128, 0.103);">
+
+                            {{ postEditPageTitle }}
+                        
+                        </h3>
                         <h4 >Заголовок</h4>
                         <span style="font-size: 12px;">Придумайте наиболее подходящий заголовок для вашего поста</span>
                         <input class="s-input" [(ngModel)]="post.Title">
@@ -46,7 +49,7 @@
         
                         <h4 class="mt-4">Содержание</h4>
                         <span style="font-size: 12px;">Введите содержание поста в формате markdown</span>
-                        <textarea class="s-input" style="resize: vertical;" id="postContentTextArea" (keyup)="changeTextAreaHeighth()" [(ngModel)]="post.Content"></textarea>
+                        <textarea class="s-input" style="resize: vertical;" id="postContentTextArea" [(ngModel)]="post.Content"></textarea>
         
                         <div class="d-flex justify-content-end">
 
@@ -58,12 +61,10 @@
                     </div>
     
                     <div class="col-sm-8 p-3" style="border-left: 1px solid rgba(128, 128, 128, 0.103);">
+                        <h3 class="mb-2"  style="border-bottom: 1px solid rgba(128, 128, 128, 0.103);">Предпросмотр</h3>
                         <app-post [post]="post"></app-post>
                     </div>
                 </div>
-           
-            </div>
-            
         </ng-container>
 
     </main>

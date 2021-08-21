@@ -167,6 +167,14 @@ export class PostEditComponent implements OnInit {
     return "Отправить на публикацию"
   }
 
+  get postEditPageTitle() : string
+  {
+    if (this.postEditmode)
+      return "Редактирование поста"
+    return "Новый пост"
+  }
+
+
   
   changeTagSearchInputWidth()
   {

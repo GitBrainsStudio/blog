@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/Services/AuthenticationService';
 
 @Component({
   selector: 'app-top-menu',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authenticationService:AuthenticationService) { }
 
   ngOnInit(): void {
   }
+
 
 }

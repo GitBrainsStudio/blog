@@ -1,0 +1,33 @@
+<div class="wrap">
+    <app-top-menu></app-top-menu>
+    <main class="mb-5 container">
+
+        <div class="row">
+            <div class="col-sm-2 p-3" (keyup.enter)="login()">
+
+                <h3 class="mb-2" style="border-bottom: 1px solid rgba(128, 128, 128, 0.103);">Вход</h3>
+                <span style="font-size: 12px;">Почтовый адрес:</span>
+                <input class="s-input" [(ngModel)]="authenticationData.Email">
+
+                <span style="font-size: 12px;">Пароль:</span>
+                <input class="s-input" type="password" [(ngModel)]="authenticationData.Password">
+
+                <div class="d-flex justify-content-end">
+
+                    <button class="button" (click)="login()" >
+                      Войти
+                    </button> 
+
+                </div>
+
+            </div>
+            <div class="col-sm-10">
+                
+            </div>
+        </div>
+    </main>
+</div>
+
+<app-footer></app-footer>
+
+

@@ -1,0 +1,267 @@
+[33mcommit 8e234ddd683db7bade1fe12e0614590674d9e092[m[33m ([m[1;36mHEAD -> [m[1;32madd-authentication[m[33m)[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sun Aug 22 00:24:33 2021 +0500
+
+    added display of tags in the post
+
+[33mcommit fd57ca434a1cb50cd831bb3ba731ccb75a4bc1b9[m[33m ([m[1;31morigin/add-authentication[m[33m)[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 21 22:34:18 2021 +0500
+
+    update css and html
+
+[33mcommit 3ebafe8fcd55a4e25390f2298c9dc7fad1801e70[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 21 22:06:34 2021 +0500
+
+    delete changePostContentAreaHeight event
+
+[33mcommit 90d502b2932917fc017a839455e5045ae4b73ed2[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 21 21:42:05 2021 +0500
+
+    add not authenticated account restrictions
+
+[33mcommit e536d7a76aa029018199757135476ad67518d3cc[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Fri Aug 20 11:20:56 2021 +0500
+
+    add handler for 401,403 errors
+
+[33mcommit e97aeff10d280b7c86b1e6ee757480302f9c4e0e[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Fri Aug 20 10:44:02 2021 +0500
+
+    add token interceptor
+
+[33mcommit dff6c3116ee56fa653a29e991ca814da056b4f43[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Fri Aug 20 10:17:15 2021 +0500
+
+    add authentication service
+
+[33mcommit a22131efde42394fcbfc811131e5e08dd31e45b8[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Thu Aug 19 17:15:24 2021 +0500
+
+    add a href in top menu
+
+[33mcommit 9510d90adafaa957c4df88a4057e7699813216be[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Thu Aug 19 16:49:22 2021 +0500
+
+    add html content for authentication component
+
+[33mcommit ff476f163187dbec6ae85bada197ec4f8dfb0863[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Thu Aug 19 16:38:41 2021 +0500
+
+    add new route
+
+[33mcommit d0854f2f3ac698e8be35388d46a70a631b55b3e4[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Thu Aug 19 16:37:22 2021 +0500
+
+    generate new component
+
+[33mcommit b50de172bc474e656574e59cec4902c6f49af7b4[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: e12047f f802deb
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Sat Aug 14 12:00:42 2021 +0500
+
+    Merge pull request #2 from GitBrainsStudio/2.4
+    
+    fix css pre wrap in post component and fix logic for select tag
+
+[33mcommit f802debcdce7c4ef70b959a337b979214d8f4529[m[33m ([m[1;31morigin/2.4[m[33m)[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 14 12:00:07 2021 +0500
+
+    fix css pre wrap in post component and fix logic for select tag
+
+[33mcommit e12047fa91ec786d96e95757b4d5de083f83e22c[m
+Merge: ec38ed2 5cec0e4
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Wed Aug 11 19:23:49 2021 +0500
+
+    Merge pull request #1 from GitBrainsStudio/2.4
+    
+    2.4
+
+[33mcommit 5cec0e4b0095ea03d7fda9b662577bda0808fd36[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Wed Aug 11 19:19:18 2021 +0500
+
+    fix backspace keyup logic in tag editor
+
+[33mcommit 2c7bb1dbf5ee8ae08c86428b7be9f8e2617d0684[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Wed Aug 11 18:51:41 2021 +0500
+
+    refact project structure
+
+[33mcommit cafa55d28e937cd069c4db7d0cde5cb95f0e847d[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Tue Aug 10 21:42:50 2021 +0500
+
+    realese crud logic for post entity
+
+[33mcommit ba424925adf08a2eafe9c56c8bf90cd474aa588f[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 7 22:53:44 2021 +0500
+
+    add simple logic for tags suggestions
+
+[33mcommit 6aa2e5222109fa3486181a86e8dad0f9f0af8f5a[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 7 18:34:11 2021 +0500
+
+    update to ng v11
+
+[33mcommit d3b791324d56a66d0838df87fd4029e31c67fa90[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 7 17:41:13 2021 +0500
+
+    update to ng v10
+
+[33mcommit 31f0ffdcf8fdae7d888881b89a414f29fb4dae58[m
+Author: GitBrainsStudio <gitbrains@gmail.com>
+Date:   Sat Aug 7 17:32:27 2021 +0500
+
+    fix simple changes befor updating ng
+
+[33mcommit 53fa034bc6e9d32897a7d0fa3c3688177685f3e3[m[33m ([m[1;31morigin/2.3[m[33m)[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Thu Oct 8 19:33:04 2020 +0500
+
+    fix url project
+
+[33mcommit ec38ed2f5ecf8425c178363a22df0af49378e017[m
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Mon Oct 5 20:08:37 2020 +0500
+
+    Update README.md
+
+[33mcommit 14b6a1a6c2a9d52b7b01d6cfaf5d347809f63fd1[m
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Sat Oct 3 13:11:17 2020 +0500
+
+    Update README.md
+
+[33mcommit bfee7a4be6d29b39d64c42ac72d396360b25b1c3[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Tue Sep 29 09:48:46 2020 +0500
+
+    add new project in list
+
+[33mcommit 4a79819905fb227fdb7d7b66f68af8cd95c8a123[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Mon Sep 28 20:39:19 2020 +0500
+
+    add css margin
+
+[33mcommit 2f661aaf46ff3d8d9313efdb752e751149a023ff[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Mon Sep 28 20:33:03 2020 +0500
+
+    refact commit
+
+[33mcommit 2c772f64e4cf2b2c24c3c12d1e8927bc7bbee33c[m
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Thu Sep 24 19:16:18 2020 +0500
+
+    Update solid.md
+
+[33mcommit 535ae71cadd8eddd57d652a001eb8a3815ddc487[m
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Thu Sep 24 19:14:30 2020 +0500
+
+    Update solid.md
+
+[33mcommit 1a216038a71e2f755d3f2a909ce965f739767798[m
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Thu Sep 24 19:13:08 2020 +0500
+
+    Update solid.md
+
+[33mcommit eecb291d35a4013e5e92be4ca3364b3faaabb30a[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Thu Sep 24 19:06:35 2020 +0500
+
+    deploy commit
+
+[33mcommit 51add22d10d56cdac9226210ab42782f02ba77db[m[33m ([m[1;31morigin/2.2[m[33m)[m
+Author: GitBrainsStudio <65179794+GitBrainsStudio@users.noreply.github.com>
+Date:   Wed Sep 23 11:48:09 2020 +0500
+
+    Update refact-blog-event.md
+
+[33mcommit a36a4f9b690e1fe936c8aa489376ae3023fa9ee7[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Wed Sep 23 11:42:36 2020 +0500
+
+    fix css bug
+
+[33mcommit a6777aa17e9a44c762db156f59715451db4b8d09[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Tue Sep 22 20:51:13 2020 +0500
+
+    refact commit
+
+[33mcommit cfd4564ba56f6a06e63005059182c7eb79300a0c[m[33m ([m[1;31morigin/2.x[m[33m)[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Tue Sep 22 20:45:24 2020 +0500
+
+    final day commit
+
+[33mcommit cedec26ff8ab427fa1d1a743846a1e7a76618a6e[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Tue Sep 22 10:56:23 2020 +0500
+
+    edit structure
+
+[33mcommit afb7ac63318d156fcdb8228d8e0f7cf8586dd9ea[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Tue Sep 22 10:55:19 2020 +0500
+
+    day commit
+
+[33mcommit ff44470d525c37f7f210463fddd88efa0f2bd8fc[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Mon Sep 21 21:38:29 2020 +0500
+
+    edit layout const
+
+[33mcommit b0804184790c58f8439d88fbc3e3a19022e4e703[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Mon Sep 21 21:35:29 2020 +0500
+
+    edit layout const
+
+[33mcommit 94ce7d8a4b6e45a358e3fbf18557eb536fa6e150[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Mon Sep 21 14:53:32 2020 +0500
+
+    refact app directory
+
+[33mcommit df8638f9abd7d45845c35d37e6e7e49d57be0065[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Mon Sep 21 13:05:38 2020 +0500
+
+    edit layout min-width
+
+[33mcommit 980e22227f3f4df49c5cf847b7e7d9ff0915ae8c[m[33m ([m[1;31morigin/1.x[m[33m)[m
+Author: Developer <gitbrains@gmail.com>
+Date:   Mon Aug 3 20:56:34 2020 +0500
+
+    pc new post
+
+[33mcommit e1b48542fd7ecb2646c6126fcd7e38f54c52b1fd[m
+Merge: bf7f63a 64f6c1c
+Author: Developer <gitbrains@gmail.com>
+Date:   Sun Jul 12 14:03:53 2020 +0500
+
+    Merge branch 'master' of https://github.com/GitBrainsStudio/Blog
+
+[33mcommit bf7f63a27918d41bcf9135ab1653046a5172ffa1[m
+Au
