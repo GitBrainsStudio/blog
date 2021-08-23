@@ -135,3 +135,62 @@
     outline: 0;
     fill: #39739d;;
 }
+
+.uploader-item
+{
+    width: 100px;
+    height: 75px;
+    background: url(https://www.avito.ru/dstatic/build/8bb1db058a01fabddc8a.svg) center no-repeat #ffffff;
+    border: 1px solid #D6D6D6;
+    border-radius: 2px;
+    display: flex;
+}
+
+.uploader-item:hover
+{
+    cursor: pointer;
+    background-color: #F5F5F5;
+    border-color: #cccccc
+}
+
+.uploader-item-preview
+{
+    width: 100px;
+    height: 75px;
+    border: 1px solid #D6D6D6;
+    border-radius: 2px;
+    display: flex;
+    position: relative;
+}
+
+.uploader-item-preview img
+{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;	
+}
+
+.uploader
+{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.delete-btn
+{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+    height: 17px;
+    width: 17px;
+    border: 0;
+    background: no-repeat center #fff url(https://www.avito.ru/dstatic/build/b1fd4fa2b4ae58ff68f5.svg)
+}
+
+.delete-btn:hover
+{
+    cursor: pointer;
+}

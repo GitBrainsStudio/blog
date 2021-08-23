@@ -1,11 +1,14 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ImageUpload } from 'src/app/Dtos/Images/ImageUpload';
 import { PostCreate } from 'src/app/Dtos/Posts/PostCreate';
 import { PostUpdate } from 'src/app/Dtos/Posts/PostUpdate';
 import { Post } from 'src/app/Models/Post';
 import { Tag } from 'src/app/Models/Tag';
+import { ImageService } from 'src/app/Services/ImageService';
 import { PostService } from 'src/app/Services/PostService';
 import { TagService } from 'src/app/Services/TagSerivce';
+import { GTBRNS_BLOG_API } from 'src/environments/environment';
 
 @Component({
   selector: 'app-post-edit',
@@ -17,6 +20,7 @@ export class PostEditComponent implements OnInit {
   constructor(
     private tagService:TagService,
     private postService:PostService,
+    private imageService:ImageService,
     private router:Router,
     private activatedRoute: ActivatedRoute) { }
 
@@ -212,4 +216,39 @@ export class PostEditComponent implements OnInit {
     textArea.style.height = '100px';
     textArea.style.height = textArea.scrollHeight + 'px';
   }
+
+  images: (string | ArrayBuffer)[] = []
+  imageSrc: string | ArrayBuffer;
+  files = []
+
+
+  onFileChanged(event: any) {
+    if (event.target.files && event.target.files[0]) {
+
+      let files = event.target.files;
+      if (files) {
+        for (let file of files) {
+          let reader = new FileReader();
+          reader.onload = (e: any) => {
+            
+            let imageBytes = e.target.result.split(',')[1]
+            this.imageService.Upload(new ImageUpload(imageBytes))
+              .subscribe(imageTitle => 
+                
+                this.post.ImagesSrcs.push(GTBRNS_BLOG_API + "files/images/" + imageTitle)
+
+                )
+          }
+          
+          reader.readAsDataURL(file);
+        }
+      }
+  }
+  }
+  
+  deletePostImage(imageIndex:number)
+  {
+    this.post.ImagesSrcs.splice(imageIndex, 1)
+  }
+
 }

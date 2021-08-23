@@ -46,6 +46,21 @@
                                 </ng-container>
                             </div>
                         </div>
+
+                        <h4 class="mt-4">Изображения</h4>
+                        <div class="uploader">
+                            
+                            <div class="uploader-item-preview mr-2 mb-2" *ngFor="let imageSrc of post.ImagesSrcs; let i = index;" >
+                                <button class="delete-btn" (click)="deletePostImage(i)"></button>
+                               
+                                <img id="blah" [src]="imageSrc" alt="your image" />
+                            </div>
+                           
+                            <label for="img" class="uploader-item"  >
+                                <input style="visibility: hidden;" multiple type="file" id="img" name="img" accept="image/*" (change)="onFileChanged($event)">
+                            </label>
+                           
+                        </div>
         
                         <h4 class="mt-4">Содержание</h4>
                         <span style="font-size: 12px;">Введите содержание поста в формате markdown</span>

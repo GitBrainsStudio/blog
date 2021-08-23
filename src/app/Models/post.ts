@@ -9,6 +9,7 @@ export class Post
     CreateDate:string
     Content:string
     Tags:Tag[]
+    ImagesSrcs:string[] = []
 
     constructor(id:string, title:string, description:string, createDate:string, content:string, tags:Tag[])
     {
@@ -19,7 +20,5 @@ export class Post
         this.Content = content
         this.Tags = tags
     }
-
-
-
+    
 }
