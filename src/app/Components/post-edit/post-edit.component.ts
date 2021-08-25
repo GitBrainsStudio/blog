@@ -227,16 +227,15 @@ export class PostEditComponent implements OnInit {
     if (event.target.files && event.target.files[0])
     {
       let reader = new FileReader();
-      console.log('1')
+
       reader.readAsDataURL(event.target.files[0]);
-      console.log('2')
       reader.onload = (e: any) => {
         
         let imageBytes = e.target.result.split(',')[1]
-        console.log('3')
         this.imageService.Upload(new ImageUpload(imageBytes))
-          .subscribe(image => { this.post.Images.push(image);  console.log('4') })
-      }
+          .subscribe(image => { this.post.Images.push(image);  })
+    
+        }
   
     }  
   }
