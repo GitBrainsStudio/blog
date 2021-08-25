@@ -11,7 +11,7 @@ li
     display: inline;
 }
 
-::ng-deep img
+::ng-deep markdown img
 {
     max-width: 90% !important;
 }
