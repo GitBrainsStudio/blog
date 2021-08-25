@@ -1,3 +1,4 @@
+import { Image } from "./Image"
 import { Tag } from "./Tag"
 
 export class Post
@@ -9,9 +10,9 @@ export class Post
     CreateDate:string
     Content:string
     Tags:Tag[]
-    ImagesSrcs:string[] = []
+    Images:Image[]
 
-    constructor(id:string, title:string, description:string, createDate:string, content:string, tags:Tag[])
+    constructor(id:string, title:string, description:string, createDate:string, content:string, tags:Tag[], images:Image[])
     {
         this.Id = id
         this.Title = title
@@ -19,6 +20,7 @@ export class Post
         this.CreateDate = createDate
         this.Content = content
         this.Tags = tags
+        this.Images = images
     }
     
 }

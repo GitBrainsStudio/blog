@@ -50,14 +50,14 @@
                         <h4 class="mt-4">Изображения</h4>
                         <div class="uploader">
                             
-                            <div class="uploader-item-preview mr-2 mb-2" *ngFor="let imageSrc of post.ImagesSrcs; let i = index;" >
-                                <button class="delete-btn" (click)="deletePostImage(i)"></button>
+                            <div class="uploader-item-preview mr-2 mb-2" *ngFor="let image of post.Images; let i = index;" >
+                                <button class="delete-btn" (click)="deletePostImage(image, i)"></button>
                                
-                                <img id="blah" [src]="imageSrc" alt="your image" />
+                                <img id="blah" [src]="image.Src" alt="your image" />
                             </div>
                            
                             <label for="img" class="uploader-item"  >
-                                <input style="visibility: hidden;" multiple type="file" id="img" name="img" accept="image/*" (change)="onFileChanged($event)">
+                                <input style="visibility: hidden;" type="file" id="img" name="img" accept="image/*" (change)="onFileChanged($event)">
                             </label>
                            
                         </div>

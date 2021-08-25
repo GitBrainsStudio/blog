@@ -1,8 +1,11 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { read } from 'fs';
+import { ImageDelete } from 'src/app/Dtos/Images/ImageDelete';
 import { ImageUpload } from 'src/app/Dtos/Images/ImageUpload';
 import { PostCreate } from 'src/app/Dtos/Posts/PostCreate';
 import { PostUpdate } from 'src/app/Dtos/Posts/PostUpdate';
+import { Image } from 'src/app/Models/Image';
 import { Post } from 'src/app/Models/Post';
 import { Tag } from 'src/app/Models/Tag';
 import { ImageService } from 'src/app/Services/ImageService';
@@ -57,6 +60,7 @@ export class PostEditComponent implements OnInit {
         null,
         null,
         null,
+        [],
         []
       )
 
@@ -217,38 +221,30 @@ export class PostEditComponent implements OnInit {
     textArea.style.height = textArea.scrollHeight + 'px';
   }
 
-  images: (string | ArrayBuffer)[] = []
-  imageSrc: string | ArrayBuffer;
-  files = []
-
 
   onFileChanged(event: any) {
-    if (event.target.files && event.target.files[0]) {
 
-      let files = event.target.files;
-      if (files) {
-        for (let file of files) {
-          let reader = new FileReader();
-          reader.onload = (e: any) => {
-            
-            let imageBytes = e.target.result.split(',')[1]
-            this.imageService.Upload(new ImageUpload(imageBytes))
-              .subscribe(imageTitle => 
-                
-                this.post.ImagesSrcs.push(GTBRNS_BLOG_API + "files/images/" + imageTitle)
-
-                )
-          }
-          
-          reader.readAsDataURL(file);
-        }
+    if (event.target.files && event.target.files[0])
+    {
+      let reader = new FileReader();
+      console.log('1')
+      reader.readAsDataURL(event.target.files[0]);
+      console.log('2')
+      reader.onload = (e: any) => {
+        
+        let imageBytes = e.target.result.split(',')[1]
+        console.log('3')
+        this.imageService.Upload(new ImageUpload(imageBytes))
+          .subscribe(image => { this.post.Images.push(image);  console.log('4') })
       }
-  }
-  }
   
-  deletePostImage(imageIndex:number)
+    }  
+  }
+
+  
+  deletePostImage(selectedImage:Image, selectedImageindex:number)
   {
-    this.post.ImagesSrcs.splice(imageIndex, 1)
+    this.post.Images.splice(selectedImageindex, 1)
   }
 
 }

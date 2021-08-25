@@ -6,6 +6,7 @@ export class PostUpdate
     Title:string
     Content:string
     TagsTitles:string[]
+    ImagesIds:string[]
 
     constructor(post:Post)
     {
@@ -13,5 +14,6 @@ export class PostUpdate
         this.Title = post.Title
         this.Content = post.Content
         this.TagsTitles = post.Tags.map(tag => tag.Title)
+        this.ImagesIds = post.Images.map(image => image.Id)
     }
 }

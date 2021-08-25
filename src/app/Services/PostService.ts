@@ -6,6 +6,7 @@ import { GTBRNS_BLOG_API } from "src/environments/environment";
 import { PostCreate } from "../Dtos/Posts/PostCreate";
 import { PostDelete } from "../Dtos/Posts/PostDelete";
 import { PostUpdate } from "../Dtos/Posts/PostUpdate";
+import { Image } from "../Models/Image";
 import { Post } from "../Models/Post";
 import { Tag } from "../Models/Tag";
 
@@ -29,7 +30,9 @@ export class PostService
         return this.http.get(GTBRNS_BLOG_API + "posts/" + id).pipe(map((post:Post) =>
                 new Post(post.Id, post.Title, post.Description, post.CreateDate, post.Content, 
                     
-                    post.Tags.map((tag:Tag) => new Tag(tag.Id, tag.Title)))
+                    post.Tags.map((tag:Tag) => new Tag(tag.Id, tag.Title)),
+
+                    post.Images.map((image:Image) => new Image(image.Id, image.Title, image.UploadDate)))
 
                     ))
     }
@@ -41,7 +44,9 @@ export class PostService
                 new Post(post.Id, post.Title, post.Description, post.CreateDate, post.Content, 
                     
                     
-                    post.Tags.map((tag:Tag) => new Tag(tag.Id, tag.Title)))
+                    post.Tags.map((tag:Tag) => new Tag(tag.Id, tag.Title)),
+
+                    post.Images.map((image:Image) => new Image(image.Id, image.Title, image.UploadDate)))
 
 
                     )))
@@ -59,14 +64,6 @@ export class PostService
 
     Delete(postDelete:PostDelete)
     {
-        const options = {
-            headers: new HttpHeaders({
-              'Content-Type': 'application/json'
-            }),
-            body: {
-              Id: 'ravi123'
-            }
-          }
         return this.http.delete(GTBRNS_BLOG_API + "posts/", { body: postDelete})
     }
 }
