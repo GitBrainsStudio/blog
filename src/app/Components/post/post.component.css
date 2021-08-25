@@ -10,3 +10,8 @@ li
     padding-bottom: .35rem;
     display: inline;
 }
+
+::ng-deep img
+{
+    max-width: 90% !important;
+}
